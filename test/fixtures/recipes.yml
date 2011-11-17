@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  title: MyString
+  body: MyString
+  ingredients: MyString
+  cooktime: 2011-11-18 00:29:12
+  rating: 1
+  numVotes: 1
+
+two:
+  title: MyString
+  body: MyString
+  ingredients: MyString
+  cooktime: 2011-11-18 00:29:12
+  rating: 1
+  numVotes: 1
