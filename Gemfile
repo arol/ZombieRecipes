@@ -34,3 +34,5 @@ group :test do
   # Pretty printed test output
   gem 'turn', :require => false
 end
+
+gem "seed_dump", "~> 0.3.4"
