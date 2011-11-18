@@ -14,7 +14,7 @@
 <% @zombies.each do |zombie| %>
   <tr>
     <td><%= zombie.name %></td>
-    <td><%= zombie.avatar %></td>
+    <td><%= truncate zombie.avatar %></td>
     <td><%= zombie.bio %></td>
     <td><%= zombie.death %></td>
     <td><%= link_to 'Show', zombie %></td>
