@@ -11,6 +11,11 @@
     </div>
   <% end %>
 
+	<div class="field">
+		<%= f.label "Author" %>
+		<%= f.select :zombie_id, @zombies.collect {|z| [z.name, z.id]} %>
+	</div>
+	
   <div class="field">
     <%= f.label :title %><br />
     <%= f.text_field :title %>

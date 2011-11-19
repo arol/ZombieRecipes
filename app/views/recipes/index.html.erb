@@ -3,6 +3,7 @@
 <table>
   <tr>
     <th>Title</th>
+    <th>Author</th>
     <th>Body</th>
     <th>Ingredients</th>
     <th>Cooktime</th>
@@ -16,9 +17,10 @@
 <% @recipes.each do |recipe| %>
   <tr>
     <td><%= recipe.title %></td>
-    <td><%= recipe.body %></td>
-    <td><%= recipe.ingredients %></td>
-    <td><%= recipe.cooktime %></td>
+    <td><%= recipe.zombie.name %></td>
+    <td><%= truncate recipe.body %></td>
+    <td><%= truncate recipe.ingredients %></td>
+    <td><%= recipe.cooktime.to_s(:time) %></td>
     <td><%= recipe.rating %></td>
     <td><%= recipe.numVotes %></td>
     <td><%= link_to 'Show', recipe %></td>

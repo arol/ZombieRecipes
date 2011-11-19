@@ -2,7 +2,7 @@
 # Do not hesitate to tweak this to your needs
 
 Recipe.create([
-  { :title => nil, :body => nil, :ingredients => nil, :cooktime => nil, :rating => nil, :numVotes => nil, :created_at => nil, :updated_at => nil }
+  { :title => "Brainz al vapor", :body => "Agafar els brainz i ficarlos al vapor", :ingredients => "brainz, aigua", :cooktime => "2000-01-01 00:20:00", :rating => 0, :numVotes => 0, :created_at => "2011-11-19 00:04:18", :updated_at => "2011-11-19 00:04:18", :zombie_id => 1 }
 ])
 
 
