@@ -35,6 +35,7 @@ class RecipesController < ApplicationController
 
   # GET /recipes/1/edit
   def edit
+    @zombies = Zombie.all
     @recipe = Recipe.find(params[:id])
   end
 
