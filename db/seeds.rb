@@ -3,7 +3,7 @@
 
 Recipe.create([
   { :title => "Brainz al vapor", :body => "Agafar els brainz i ficarlos al vapor", :ingredients => "brainz, aigua", :cooktime => "2000-01-01 00:20:00", :rating => 0, :numVotes => 0, :created_at => "2011-11-19 00:04:18", :updated_at => "2011-11-19 00:04:18", :zombie_id => 1 },
-  { :title => "Brainz en escabeche con pasas!", :body => "Agafes els brainz, fas una escabechina i despres li fiques unes pases.", :ingredients => "brainz, escabeche, destral, pases", :cooktime => "2000-01-01 01:10:00", :rating => 0, :numVotes => 0, :created_at => "2011-11-19 11:31:13", :updated_at => "2011-11-19 11:32:52", :zombie_id => 3 }
+  { :title => "Brainz en escabeche con pasas!", :body => "Agafes els brainz, fas una escabechina i despres li fiques unes pases.", :ingredients => "brainz, escabeche, destral, pases", :cooktime => "2000-01-01 01:10:00", :rating => 0, :numVotes => 0, :created_at => "2011-11-19 11:31:13", :updated_at => "2011-11-19 11:32:52", :zombie_id => 3 },
 ])
 
 
@@ -11,7 +11,8 @@ Recipe.create([
 Zombie.create([
   { :name => "Arol", :avatar => "", :bio => "He mort", :death => "2011-11-18", :created_at => "2011-11-18 00:03:36", :updated_at => "2011-11-18 00:03:36" },
   { :name => "David", :avatar => "http://a2.twimg.com/profile_images/1560812305/image.jpg", :bio => "Ha mort", :death => "2011-11-11", :created_at => "2011-11-18 00:04:52", :updated_at => "2011-11-18 00:04:52" },
-  { :name => "Olga", :avatar => "http://gamesprays.com/images/icons/zombie-wonder-woman-3996_preview.png", :bio => "braaaainz cupcakes", :death => "2008-12-31", :created_at => "2011-11-19 11:28:53", :updated_at => "2011-11-19 11:28:53" }
+  { :name => "Olga", :avatar => "http://gamesprays.com/images/icons/zombie-wonder-woman-3996_preview.png", :bio => "braaaainz cupcakes", :death => "2008-12-31", :created_at => "2011-11-19 11:28:53", :updated_at => "2011-11-19 11:28:53" },
+  { :name => "Laura", :avatar => "nil", :bio => "ñaaaa", :death => "2011-04-20", :created_at => "2011-11-20 19:00:44", :updated_at => "2011-11-20 19:00:53" }
 ])
 
 
