@@ -12,32 +12,32 @@
   <% end %>
 
 	<div class="field">
-		<%= f.label "Author" %>
+		<%= f.label "Autor" %>
 		<%= f.select :zombie_id, @zombies.collect {|z| [z.name, z.id]} %>
 	</div>
 	
   <div class="field">
-    <%= f.label :title %><br />
+    <%= f.label "Titol" %><br />
     <%= f.text_field :title %>
   </div>
   <div class="field">
-    <%= f.label :body %><br />
-    <%= f.text_field :body %>
+    <%= f.label "Preparació" %><br />
+    <%= f.text_area :body %>
   </div>
   <div class="field">
     <%= f.label :ingredients %><br />
     <%= f.text_field :ingredients %>
   </div>
   <div class="field">
-    <%= f.label :cooktime %><br />
+    <%= f.label "Temps de cocció" %><br />
     <%= f.time_select :cooktime %>
   </div>
   <div class="field">
-    <%= f.label :rating %><br />
+    <%= f.label "Valoració" %><br />
     <%= f.number_field :rating %>
   </div>
   <div class="field">
-    <%= f.label :numVotes %><br />
+    <%= f.label "Nombre de vots" %><br />
     <%= f.number_field :numVotes %>
   </div>
   <div class="actions">
