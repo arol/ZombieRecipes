@@ -7,7 +7,13 @@
 
 <p>
   <b>Avatar:</b>
-  <%= image_tag @zombie.avatar %>
+  <%= 
+	if !@zombie.avatar == ""
+		image_tag @zombie.avatar  
+	else
+		"No avatar"
+	end
+	%>
 </p>
 
 <p>

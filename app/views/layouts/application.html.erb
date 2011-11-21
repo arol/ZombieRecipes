@@ -8,17 +8,21 @@
 </head>
 <body>
 
-	<div>
-		<h1>Zombie Recipes</h1>
+<div id='wrapper'>
+	<header id="logo">
+		<h1>ZOMBIE RECIPES</h1>
 		<h2>braaainz!</h2>
-	</div>
+	</header>
 	
-	<div class='menu'>
-		<%= link_to "Recipes", recipes_path %>
-		<%= link_to "Zombies", zombies_path %>
-	</div>
+	<nav id='main'>
+		<ul>
+			<li><%= link_to "Recipes", recipes_path %></li>
+			<li><%= link_to "Zombies", zombies_path %></li>
+			<div class='clear'></div>
+		</ul>
+	</nav>
 
 <%= yield %>
-
+</div>
 </body>
 </html>
