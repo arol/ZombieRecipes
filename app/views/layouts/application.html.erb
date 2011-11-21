@@ -7,22 +7,52 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+<div class='wrapper'>
+	<div class='content'>	
+		<header id="logo">
+			<h1>ZOMBIE RECIPES</h1>
+			<h2>braaainz!</h2>
+		</header>	
+		<nav id='main'>
+			<ul>
+				<li><%= link_to "Recipes", recipes_path %></li>
+				<li><%= link_to "Zombies", zombies_path %></li>
+				<div class='clear'></div>
+			</ul>
+		</nav>
 
-<div id='wrapper'>
-	<header id="logo">
-		<h1>ZOMBIE RECIPES</h1>
-		<h2>braaainz!</h2>
-	</header>
-	
-	<nav id='main'>
-		<ul>
-			<li><%= link_to "Recipes", recipes_path %></li>
-			<li><%= link_to "Zombies", zombies_path %></li>
-			<div class='clear'></div>
-		</ul>
-	</nav>
-
-<%= yield %>
+		<%= yield %>
+	</div>
 </div>
+
+<footer>
+	<div id='transparencia'></div>
+	<div class='content'>
+		<section>
+			<header><h1>Our team</h1></header>
+			<article>
+				We are David Cortes and Arol Vi&ntilde;olas trying to make something with Ruby on Rails.
+				We are both Software Engineer students at FIB (Universitat Politecnica de Catalunya).
+				<br/><br/>
+				Join the train with us!
+			</article>
+		</section>
+		<div class='separator'></div>
+		<section>
+			<header><h1>More projects</h1></header>
+			<article>
+				Our team is working in other web and iOS projects, but they're all top secret! :)
+			</article>
+		</section>
+		<div class='separator'></div>
+		<section>
+			<header><h1>Find us</h1></header>
+			<article>
+				You can find us on Twitter (<a href='http://www.twitter.com/davebcn87'>@davebcn87</a> and <a href='http://www.twitter.com/arolet'>@arolet</a> ).
+			</article>
+		</section>
+		<div class='clear'></div>
+	</div>
+</footer>
 </body>
 </html>
