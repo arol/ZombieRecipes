@@ -6,6 +6,13 @@
  *= require_tree . 
 */
 
+html, body{
+	width:100%;
+	padding:0;
+	margin:0;
+	font-family: Lucida, sans-serif;
+}
+
 @font-face {
     font-family: 'UniversLTStd49LtUltraCn';
     src: url('/assets/Univers/universltstd-lightultracn-webfont.eot');
@@ -19,12 +26,17 @@
 }
 
 body{
+	background-image: url(<%= asset_path('black_denim.png') %>);
+}
+.wrapper{
 	background-image: url(<%= asset_path('vichy.png') %>);
+	padding-bottom: 75px;
 }
 
-#wrapper{
+.content{
 	width: 960px;
 	margin: 0 auto;
+	padding: 20px 30px;
 }
 
 h1{
@@ -69,7 +81,7 @@ nav#main{
 			font-weight: bold;
 		}
 		li:hover{
-			background-color: #b8b8b8;
+			background-color: rgba(184, 184, 184, 0.5);
 			a{
 				color: #d54b1a;
 			}
@@ -120,6 +132,7 @@ table{
 		}
 	}
 }
+
 /* Form */
 form{
   background-image: url(<%= asset_path('roughcloth.png') %>);
@@ -149,4 +162,32 @@ form{
       height:150px;
     }
   }
+}
+
+
+footer{
+	color: #eee;
+	width:100%;
+	
+	#transparencia{
+		background-color:rgba(255,255,255,0.1);
+		height:15px;
+		box-shadow: 0px -1px 0px rgba(255,255,255,1);
+	}
+	section{
+		width:300px;
+		float:left;
+	}
+	.separator{
+		width:30px;
+		height:30px;
+		float:left;
+	}
+	a{
+		color : #fff;
+		border-bottom: 1px dashed #fff;
+		&:hover{
+			border-bottom: 1px dashed #d54b1a;
+		}	
+	}
 }
