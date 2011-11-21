@@ -45,6 +45,6 @@ module ZombieRecipes
     # Version of your assets, change this if you want to expire all your assets
     config.assets.version = '1.0'
     #problems amb els assets a heroku
-    config.assets.compile = true
+#config.assets.compile = true
   end
 end
