@@ -9,21 +9,21 @@
     <th>Cooktime</th>
     <th>Rating</th>
     <th>Numvotes</th>
-    <th></th>
+    <!-- <th></th> -->
     <th></th>
     <th></th>
   </tr>
 
 <% @recipes.each do |recipe| %>
   <tr>
-    <td><%= recipe.title %></td>
-    <td><%= recipe.zombie.name %></td>
+    <td><%= link_to recipe.title, recipe %></td>
+    <td><%= link_to recipe.zombie.name, recipe.zombie %></td>
     <td><%= truncate recipe.body %></td>
     <td><%= truncate recipe.ingredients %></td>
     <td><%= recipe.cooktime.to_s(:time) %></td>
     <td><%= recipe.rating %></td>
     <td><%= recipe.numVotes %></td>
-    <td><%= link_to 'Show', recipe %></td>
+    <!-- <td><%= link_to 'Show', recipe %></td> -->
     <td><%= link_to 'Edit', edit_recipe_path(recipe) %></td>
     <td><%= link_to 'Destroy', recipe, confirm: 'Are you sure?', method: :delete %></td>
   </tr>

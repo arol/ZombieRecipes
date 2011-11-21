@@ -3,21 +3,21 @@
 <table>
   <tr>
     <th>Name</th>
-    <th>Avatar</th>
+    <!-- <th>Avatar</th> -->
     <th>Bio</th>
     <th>Death</th>
-    <th></th>
+    <!-- <th></th> -->
     <th></th>
     <th></th>
   </tr>
 
 <% @zombies.each do |zombie| %>
   <tr>
-    <td><%= zombie.name %></td>
-    <td><%= truncate zombie.avatar %></td>
+    <td><%= link_to zombie.name, zombie %></td>
+    <!-- <td><%= truncate zombie.avatar %></td> -->
     <td><%= zombie.bio %></td>
     <td><%= zombie.death %></td>
-    <td><%= link_to 'Show', zombie %></td>
+    <!-- <td><%= link_to 'Show', zombie %></td> -->
     <td><%= link_to 'Edit', edit_zombie_path(zombie) %></td>
     <td><%= link_to 'Destroy', zombie, confirm: 'Are you sure?', method: :delete %></td>
   </tr>
