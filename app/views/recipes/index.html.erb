@@ -11,7 +11,7 @@
       <%= image_tag recipe.imatge %>
     <% end %>
     <p class="body"><%= recipe.body %></p>
-    <p class="ingredients"><%= truncate recipe.ingredients %></p>
+    <p class="ingredients"><%=  recipe.ingredients %></p>
     <p class="cooktime"><%= recipe.cooktime.to_s(:time) %></p>
     <%= recipe.rating %>
     <%= recipe.numVotes %>
