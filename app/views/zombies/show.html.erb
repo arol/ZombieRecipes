@@ -1,31 +1,32 @@
-<p id="notice"><%= notice %></p>
-
-<p>
-  <b>Name:</b>
-  <%= @zombie.name %>
-</p>
-
-<p>
-  <b>Avatar:</b>
-  <%= 
-	if !@zombie.avatar == ""
-		image_tag @zombie.avatar  
+<p><%
+	if !(@zombie.avatar == "")
+		concat image_tag @zombie.avatar  
 	else
-		"No avatar"
+		concat "No avatar"
 	end
 	%>
 </p>
+	
+<p id="notice"><%= notice %></p>
 
-<p>
-  <b>Bio:</b>
-  <%= @zombie.bio %>
-</p>
+<div class='zombie_info'>
+	<p>
+	  <b>Name:</b>
+	  <%= @zombie.name %>
+	</p>
 
-<p>
-  <b>Death:</b>
-  <%= @zombie.death %>
-</p>
+	<p>
+	  <b>Bio:</b>
+	  <%= @zombie.bio %>
+	</p>
+
+	<p>
+	  <b>Death:</b>
+	  <%= @zombie.death %>
+	</p>
+</div>
 
 
 <%= link_to 'Edit', edit_zombie_path(@zombie) %> |
 <%= link_to 'Back', zombies_path %>
+<div class='clear'></div>
