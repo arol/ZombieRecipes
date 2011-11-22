@@ -8,16 +8,21 @@
     <%= gravatar_image_tag(recipe.zombie.mail, class: 'gravatar', title: recipe.zombie.name, alt: recipe.zombie.name) %>
     <div class="clear"></div>
     <% if (recipe.imatge) then %>
-      <%= image_tag recipe.imatge %>
+      <%= image_tag recipe.imatge, class: "imatge" %>
     <% end %>
-    <p class="body"><%= recipe.body %></p>
-    <p class="ingredients"><%=  recipe.ingredients %></p>
-    <p class="cooktime"><%= recipe.cooktime.to_s(:time) %></p>
-    <%= recipe.rating %>
-    <%= recipe.numVotes %>
-    <!-- <%= link_to 'Show', recipe %> -->
-    <%= link_to 'Edit', edit_recipe_path(recipe) %>
-    <%= link_to 'Destroy', recipe, confirm: 'Are you sure?', method: :delete %>
+    <div class="recepta">
+      <h4>Elaboration:</h4>
+      <p class="body"><%= recipe.body %></p>
+      <h4>Ingredients:</h4>
+      <p class="ingredients"><%=  recipe.ingredients %></p>
+      <p class="cooktime"><%= recipe.cooktime.to_s(:time) %></p>
+      <%= recipe.rating %>
+      <%= recipe.numVotes %>
+      <!-- <%= link_to 'Show', recipe %> -->
+      <%= link_to 'Edit', edit_recipe_path(recipe) %>
+      <%= link_to 'Destroy', recipe, confirm: 'Are you sure?', method: :delete %>
+    </div>
+    <div class="clear"></div>
   </tr>
   <% end %>
 <% end %>

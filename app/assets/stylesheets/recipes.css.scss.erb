@@ -3,8 +3,12 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 div.recipe{
-width: 500px;
-margin:20px auto;
+width: 900px;
+padding:20px 24px;
+margin-bottom:20px;
+background: url( <%= asset_path('paper.png') %>) ;
+-webkit-box-shadow: 0px 3px 2px #999;
+box-shadow: 0px 3px 2px #999;
 
   h2{
 	 font-family: 'UniversLTStd49LtUltraCn', sans-serif;
@@ -12,6 +16,7 @@ margin:20px auto;
     font-size:38px; 
     float:left;
     margin-bottom:0px;
+    margin-top:5px;
     a{
       color: #222;
     }
@@ -19,7 +24,7 @@ margin:20px auto;
   h3{
     float:right;
     margin-bottom:0px;
-    padding-top:10px;
+    margin-top:6px;
     padding-left:10px;
   }
   p{
@@ -35,13 +40,24 @@ margin:20px auto;
       background: url( <%= asset_path('tomato.png') %>) no-repeat;
       color:#888;
   }
-  img{
-    margin:20px 0px 10px;
-    width:100%;
+  img.imatge{
+    margin:25px 0px 15px 15px;
+    width:380px;
+    float:left;
+    border: 5px solid #FFF;
+	 -webkit-box-shadow: 0px 3px 2px #999;
+ 	 box-shadow: 0px 3px 2px #999;
+    -webkit-transform: rotate(-1deg);
   }
   .gravatar{
     width:30px;
     float:right; 
+  }
+  .recepta{
+    width:450px;
+    float:left;
+    margin-top:40px;
+    margin-left:30px;
   }
 }
 
