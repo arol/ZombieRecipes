@@ -1,6 +1,6 @@
 <p><%
 	if !(@zombie.avatar == "")
-		concat image_tag @zombie.avatar  
+		concat image_tag @zombie.avatar, class:'avatar'
 	else
 		concat "No avatar"
 	end
