@@ -42,3 +42,4 @@ end
 
 gem "seed_dump", "~> 0.3.4"
 gem "heroku"
+gem 'gravatar_image_tag'

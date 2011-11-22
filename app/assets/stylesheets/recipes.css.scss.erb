@@ -1,0 +1,39 @@
+// Place all the styles related to the recipes controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+div.recipe{
+width: 500px;
+margin:20px auto;
+
+  h2{
+    font-size:24px; 
+    float:left;
+    margin-bottom:0px;
+  }
+  h3{
+    float:right;
+    margin-bottom:0px;
+    padding-top:10px;
+    padding-left:10px;
+  }
+  p.body{
+    font-size:16px;
+  }
+  .ingredients{
+      padding-left:35px;
+      padding-top:5px;
+      height:25px;
+      background: url( <%= asset_path('tomato.png') %>) no-repeat;
+      color:#888;
+  }
+  img{
+    margin:20px 0px 10px;
+    width:100%;
+  }
+  .gravatar{
+    width:30px;
+    float:right; 
+  }
+}
+

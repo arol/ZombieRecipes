@@ -1,32 +1,25 @@
 <h1>Listing recipes</h1>
 
-<table>
-  <tr>
-    <th>Title</th>
-    <th>Author</th>
-    <th>Body</th>
-    <th>Ingredients</th>
-    <th>Cooktime</th>
-    <th>Rating</th>
-    <th>Numvotes</th>
-    <!-- <th></th> -->
-    <th></th>
-    <th></th>
-  </tr>
 
 <% @recipes.each do |recipe| %>
-  <tr>
-    <td><%= link_to recipe.title, recipe %></td>
-    <td><%= link_to recipe.zombie.name, recipe.zombie %></td>
-    <td><%= truncate recipe.body %></td>
-    <td><%= truncate recipe.ingredients %></td>
-    <td><%= recipe.cooktime.to_s(:time) %></td>
-    <td><%= recipe.rating %></td>
-    <td><%= recipe.numVotes %></td>
-    <!-- <td><%= link_to 'Show', recipe %></td> -->
-    <td><%= link_to 'Edit', edit_recipe_path(recipe) %></td>
-    <td><%= link_to 'Destroy', recipe, confirm: 'Are you sure?', method: :delete %></td>
+  <%= div_for (recipe) do %>
+    <h2><%= link_to recipe.title, recipe %><h2>
+    <h3><%= link_to recipe.zombie.name, recipe.zombie %></h3>
+    <%= gravatar_image_tag(recipe.zombie.mail, class: 'gravatar', title: recipe.zombie.name, alt: recipe.zombie.name) %>
+    <div class="clear"></div>
+    <% if (recipe.imatge) then %>
+      <%= image_tag recipe.imatge %>
+    <% end %>
+    <p class="body"><%= recipe.body %></p>
+    <p class="ingredients"><%= truncate recipe.ingredients %></p>
+    <p class="cooktime"><%= recipe.cooktime.to_s(:time) %></p>
+    <%= recipe.rating %>
+    <%= recipe.numVotes %>
+    <!-- <%= link_to 'Show', recipe %> -->
+    <%= link_to 'Edit', edit_recipe_path(recipe) %>
+    <%= link_to 'Destroy', recipe, confirm: 'Are you sure?', method: :delete %>
   </tr>
+  <% end %>
 <% end %>
 </table>
 
