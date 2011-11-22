@@ -5,6 +5,7 @@
   <%= div_for (recipe) do %>
     <h2><%= link_to recipe.title, recipe %><h2>
     <h3><%= link_to recipe.zombie.name, recipe.zombie %></h3>
+    <%= gravatar_image_tag(recipe.zombie.mail, class: 'gravatar', title: recipe.zombie.name, alt: recipe.zombie.name) %>
     <div class="clear"></div>
     <% if (recipe.imatge) then %>
       <%= image_tag recipe.imatge %>

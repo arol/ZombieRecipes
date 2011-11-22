@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20111122121016) do
+ActiveRecord::Schema.define(:version => 20111122123133) do
 
   create_table "recipes", :force => true do |t|
     t.string   "title"
@@ -33,6 +33,7 @@ ActiveRecord::Schema.define(:version => 20111122121016) do
     t.date     "death"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "mail"
   end
 
 end
