@@ -46,7 +46,9 @@ class RecipesController < ApplicationController
   # POST /recipes.json
   def create
     @recipe = Recipe.new(params[:recipe])
-
+    @recipe.numVotes = 0
+    @recipe.rating = 0
+    
     respond_to do |format|
       if @recipe.save
         format.html { redirect_to @recipe, notice: 'Recipe was successfully created.' }
@@ -77,10 +79,10 @@ class RecipesController < ApplicationController
   # PUT /recipes/1/vote.json
   def vote
     @recipe = Recipe.find(params[:id])
-
+    
     @recipe.rating = ((@recipe.rating * @recipe.numVotes) + params[:valVot].to_i) / (@recipe.numVotes + 1)
     @recipe.numVotes += 1
-    
+  
     @recipe.save
 
     # render json: @recipe.to_json(only: [pluralize(:numVote, 'vot') as :numVote, :rating])

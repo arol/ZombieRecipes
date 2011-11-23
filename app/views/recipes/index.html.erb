@@ -7,7 +7,7 @@
     <h3><%= link_to recipe.zombie.name, recipe.zombie %></h3>
     <%= gravatar_image_tag(recipe.zombie.mail, class: 'gravatar', title: recipe.zombie.name, alt: recipe.zombie.name) %>
     <div class="clear"></div>
-    <% if (recipe.imatge) then %>
+    <% if !recipe.imatge.blank? then %>
       <%= image_tag recipe.imatge, class: "imatge" %>
     <% end %>
     <div class="recepta">
