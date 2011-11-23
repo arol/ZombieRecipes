@@ -1,4 +1,7 @@
 class RecipesController < ApplicationController
+  include ActionView::Helpers::TextHelper
+  include ActionView::Helpers::NumberHelper
+  
   # GET /recipes
   # GET /recipes.json
   def index
@@ -69,6 +72,19 @@ class RecipesController < ApplicationController
         format.json { render json: @recipe.errors, status: :unprocessable_entity }
       end
     end
+  end
+
+  # PUT /recipes/1/vote.json
+  def vote
+    @recipe = Recipe.find(params[:id])
+
+    @recipe.rating = ((@recipe.rating * @recipe.numVotes) + params[:valVot].to_i) / (@recipe.numVotes + 1)
+    @recipe.numVotes += 1
+    
+    @recipe.save
+
+    # render json: @recipe.to_json(only: [pluralize(:numVote, 'vot') as :numVote, :rating])
+    render json: '{"numVotes":"'+ pluralize(@recipe.numVotes, "vot") + '", "rating":' + number_with_precision(@recipe.rating, precision:0) + '}'
   end
 
   # DELETE /recipes/1

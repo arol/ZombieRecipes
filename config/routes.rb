@@ -1,5 +1,7 @@
 ZombieRecipes::Application.routes.draw do
-  resources :recipes
+  resources :recipes do
+    put :vote, on: :member
+  end
 
   resources :zombies
 
