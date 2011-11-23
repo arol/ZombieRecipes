@@ -1,5 +1,6 @@
-<h1>Listing recipes</h1>
+<h1>Last recipes</h1>
 
+<p><%= link_to content_tag(:span,'New Recipe'), new_recipe_path, class: "new_button" %></p>
 
 <% @recipes.each do |recipe| %>
   <%= div_for (recipe) do %>
@@ -13,8 +14,10 @@
     <div class="recepta">
       <h4>Elaboration</h4>
       <p class="body"><%= recipe.body %></p>
-      <h4>Ingredients</h4>
-      <p class="ingredients"><%=  recipe.ingredients %></p>
+      <div class='ingredients'>
+		<h4>Ingredients</h4>
+      	<p><%=  recipe.ingredients %></p>
+	  </div>
       <p class="cooktime"><%= recipe.cooktime.to_s(:time) %></p>
       <!-- <%= recipe.rating %> -->
 		<div class="rating">

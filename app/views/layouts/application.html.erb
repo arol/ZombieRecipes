@@ -4,6 +4,9 @@
   <title>ZombieRecipes</title>
   <%= stylesheet_link_tag    "application" %>
   <%= javascript_include_tag "application" %>
+	<link href='http://fonts.googleapis.com/css?family=Pompiere|Amatic+SC:400,700|Delius+Unicase:400,700' rel='stylesheet' type='text/css'>
+	
+
   <%= csrf_meta_tags %>
 </head>
 <body>
@@ -12,7 +15,7 @@
 		<header id="logo">
 			<a href="/"><h1>ZOMBIE RECIPES</h1></a>
 			<%= image_tag asset_path('eating_brainz.png')%>
-		</header>	
+		</header>
 		<nav id='main'>
 			<ul>
 				<li><%= link_to "Recipes", recipes_path %></li>
