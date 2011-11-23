@@ -26,13 +26,12 @@
 </p>
 
 <p>
-  <b>Rating:</b>
-  <%= @recipe.rating %>
+  <%= @recipe.rating %> 
+	<%= pluralize @recipe.numVotes, "vot" %>
 </p>
 
 <p>
-  <b>Numvotes:</b>
-  <%= @recipe.numVotes %>
+
 </p>
 
 

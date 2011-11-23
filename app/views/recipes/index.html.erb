@@ -11,16 +11,33 @@
       <%= image_tag recipe.imatge, class: "imatge" %>
     <% end %>
     <div class="recepta">
-      <h4>Elaboration:</h4>
+      <h4>Elaboration</h4>
       <p class="body"><%= recipe.body %></p>
-      <h4>Ingredients:</h4>
+      <h4>Ingredients</h4>
       <p class="ingredients"><%=  recipe.ingredients %></p>
       <p class="cooktime"><%= recipe.cooktime.to_s(:time) %></p>
-      <%= recipe.rating %>
-      <%= recipe.numVotes %>
+      <!-- <%= recipe.rating %> -->
+		<div class="rating">
+
+		<% 
+			(1..5).each do |i|
+				if i <= number_with_precision(recipe.rating, precision: 0).to_i
+					classes = ['rating-star', 'achieved']
+				else
+					classes = ['rating-star']
+				end
+				%>
+				<%= link_to "", vote_recipe_path(recipe), class: classes %>
+		<% end %>
+		</div>
+      <%= content_tag :div, pluralize(recipe.numVotes, "vot"), class: 'numVot' %>
       <!-- <%= link_to 'Show', recipe %> -->
-      <%= link_to 'Edit', edit_recipe_path(recipe) %>
-      <%= link_to 'Destroy', recipe, confirm: 'Are you sure?', method: :delete %>
+	<div class='clear'></div>
+		
+    	<p>  
+			<%= link_to 'Edit', edit_recipe_path(recipe) %>
+      		<%= link_to 'Destroy', recipe, confirm: 'Are you sure?', method: :delete %>
+		</p>
     </div>
     <div class="clear"></div>
   </tr>
