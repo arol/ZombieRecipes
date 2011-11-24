@@ -36,11 +36,13 @@
       <%= content_tag :div, pluralize(recipe.numVotes, "vot"), class: 'numVot' %>
       <!-- <%= link_to 'Show', recipe %> -->
 	<div class='clear'></div>
-		
-    	<p>  
-			<%= link_to 'Edit', edit_recipe_path(recipe) %>
-      		<%= link_to 'Destroy', recipe, confirm: 'Are you sure?', method: :delete %>
-		</p>
+	
+      <% if current_user and current_user.id == recipe.zombie_id then %>
+        <p>  
+           <%= link_to 'Edit', edit_recipe_path(recipe) %>
+              <%= link_to 'Destroy', recipe, confirm: 'Are you sure?', method: :delete %>
+        </p>
+      <% end %>
     </div>
     <div class="clear"></div>
   </tr>

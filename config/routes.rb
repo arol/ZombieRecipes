@@ -1,9 +1,14 @@
 ZombieRecipes::Application.routes.draw do
+
   resources :recipes do
     put :vote, on: :member
   end
 
   resources :zombies
+  resources :sessions
+
+  get 'login' => 'zombies#login', as: 'login'
+  get 'logout' => 'sessions#destroy', as: 'logout'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

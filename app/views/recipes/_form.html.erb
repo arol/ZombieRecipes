@@ -11,10 +11,8 @@
     </div>
   <% end %>
 
-	<div class="field">
-		<%= f.label "Autor" %>
-		<%= f.select :zombie_id, @zombies.collect {|z| [z.name, z.id]} %>
-	</div>
+  <p> Estas postejant amb l'usuari <%= current_user.name %></p>
+  <%= f.hidden_field :zombie_id, value: current_user.id %>
 	
   <div class="field">
     <%= f.label "Titol" %><br />

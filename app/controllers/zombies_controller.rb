@@ -1,4 +1,13 @@
 class ZombiesController < ApplicationController
+
+  def login
+    if (params[:email]) then
+      logger.debug(params[:email])
+    else 
+      logger.debug("post buit")
+    end
+  end
+
   # GET /zombies
   # GET /zombies.json
   def index

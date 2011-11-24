@@ -12,6 +12,13 @@
 <body>
 <div class='wrapper'>
 	<div class='content'>	
+      <nav id='user_nav'>
+      <% if current_user then %> 
+         <%=link_to "Tancar Sessió de "+current_user.name , logout_path %>
+      <% else %>
+        <%= link_to "Inicia Sessió", login_path %>
+      <% end %>
+      </nav>
 		<header id="logo">
 			<a href="/"><h1>ZOMBIE RECIPES</h1></a>
 			<%= image_tag asset_path('eating_brainz.png')%>
